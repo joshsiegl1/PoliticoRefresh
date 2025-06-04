@@ -17,21 +17,21 @@ The rest of this documentation will be dedicated to technical information regard
 ## Tile Numbers: 
     Tiles are identified by numbers that are set in an abstract function within each of the respective tiles' class. A list of these numbers are as followed. To add a new tile to the game, follow the instructions [here](#create-a-new-tile)
 
-0: Empty
-1: Grass
-2: Capitol
-3: Road
-4: House
-5: Wind Turbine
-6: Coal Factory
-7: Corporation
-8: Corp Factory? 
-9: Apartment
-10: Condo
-11: Police Station
-12: Fire Station
-13: Water
-14: Tree
+    0: Empty
+    1: Grass
+    2: Capitol
+    3: Road
+    4: House
+    5: Wind Turbine
+    6: Coal Factory
+    7: Corporation
+    8: Corp Factory?    
+    9: Apartment
+    10: Condo
+    11: Police Station
+    12: Fire Station
+    13: Water
+    14: Tree
 
     You can see this pattern mimicked in  [TileFactory.cs](PoliticoRefresh.Core/Game/Tile/TileFactory.cs)
 
