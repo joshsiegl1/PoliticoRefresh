@@ -15,31 +15,31 @@ The Map Data is just a string of numbers that correspond to the [Tile Numbers](#
 with calls to [TileFactory.cs](PoliticoRefresh.Core/Game/Tile/TileFactory.cs) to return the proper tile. 
 
 # Tile Numbers: 
-Tiles are identified by numbers that are set in an abstract function within each of the respective tiles' class. A list of these numbers are as followed. To add a new tile to the game, follow the instructions [here](#create-a-new-tile)
+Tiles are identified by numbers that are set in an abstract function within each of the respective tiles' class. A list of these numbers are as followed. To add a new tile to the game, follow the instructions [here](#create-a-new-tile) <br /><br />
 
-0: Empty
-1: Grass
-2: Capitol
-3: Road
-4: House
-5: Wind Turbine
-6: Coal Factory
-7: Corporation
-8: Corp Factory?    
-9: Apartment
-10: Condo
-11: Police Station
-12: Fire Station
-13: Water
-14: Tree
+0: Empty<br />
+1: Grass<br />
+2: Capitol<br />
+3: Road<br />
+4: House<br />
+5: Wind Turbine<br />
+6: Coal Factory<br />
+7: Corporation<br />
+8: Corp Factory?<br />    
+9: Apartment<br />
+10: Condo<br />
+11: Police Station<br />
+12: Fire Station<br />
+13: Water<br />
+14: Tree<br /><br />
 
 You can see this pattern mimicked in  [TileFactory.cs](PoliticoRefresh.Core/Game/Tile/TileFactory.cs)
 
 # Create a new Tile
-This is a list of things you'll need to do to add a new tile type to the game. 
+This is a list of things you'll need to do to add a new tile type to the game.<br /><br /> 
 
-Day/Night texture
-Create a new class with the name of the tile
-Come up with a new unique random number for the tile. 
-Decide on the proper overrides (CanBeDestroyed, CanBePlaced, ect.)
+Day/Night texture<br />
+Create a new class with the name of the tile<br />
+Come up with a new unique random number for the tile.<br /> 
+Decide on the proper overrides (CanBeDestroyed, CanBePlaced, ect.)<br />
 Reference the base Tile class for help
