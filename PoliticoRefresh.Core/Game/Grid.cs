@@ -41,9 +41,19 @@ namespace PoliticoRefresh
             }
         }
 
+        public void KillTile(int x, int y)
+        {
+            Tiles[x, y] = TileFactory.Get(1, Tiles[x, y].Position); 
+        }
+
+        public void SetTiles(Tile[,] tiles)
+        {
+            Array.Copy(tiles, Tiles, GridWidth * GridHeight); 
+        }
+
         public void Draw(SpriteBatch sbatch)
-        { 
-            
+        {
+
         }
     }
 }

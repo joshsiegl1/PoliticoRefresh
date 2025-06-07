@@ -6,15 +6,19 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace PoliticoRefresh
 {
-    public static Texture2D Base;
-
-    private static void LoadNightContent(ContentManager Content)
+    public static class Assets
     {
+        public static SpriteFont debugFont;
+        public static Texture2D Base;
 
-    }
+        private static void LoadNightContent(ContentManager Content)
+        {
 
-    public static void LoadContent(ContentManager Content)
-    { 
-        
+        }
+
+        public static void LoadContent(ContentManager Content)
+        {
+
+        }
     }
 }

@@ -4,11 +4,15 @@ The main idea is to build a fun and flexible city building game with support for
 
 Interesting gameplay mechanics include political affects on the city, foreign policy, economic affects and just about anything you can think of that can happen to a real city. 
 
-More expansive goals would be to make it into a Monopoly GO type of experience where the game progresses on a turn-based theme. Pressing the GO button would trigger a Day/Night cycle. Buildings would come up, money would be earned, attacks would commence ect.
+More expansive goals would be to make it into a Monopoly GO type of experience where the game progresses via a turn-based style of play. Pressing a "Start" button would trigger a Day/Night cycle. Buildings would come up, money would be earned, attacks would commence ect.
 
-This project utilizes Monogame for cross-platform development. Monogame relies on the C# programming language and this project tries to take advantage of OO best practeces to the best of our ability.
+This project utilizes Monogame for cross-platform development. Monogame relies on the C# programming language and this project tries to take advantage of OO best practeces to the best of my ability.
 
 The rest of this documentation will be dedicated to technical information regarding the application. 
+
+TODO: 
+    Use a Project Management Tool rather than TODO's in the README. 
+    Add variables for magic numbers
 
 # Map Data
 The Map Data is just a string of numbers that correspond to the [Tile Numbers](#tile-numbers) listed below. 0's can be swapped out with any other number within the [Tile Numbers](#tile-numbers) list to display that type of tile. The tiles are generated using a [Factory Pattern](https://www.codeproject.com/Articles/1131770/Factory-Patterns-Simple-Factory-Pattern)
