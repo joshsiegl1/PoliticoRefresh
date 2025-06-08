@@ -34,3 +34,6 @@ C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\obj\
 C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\obj\Debug\net8.0\PoliticoRefresh.pdb
 C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\obj\Debug\net8.0\PoliticoRefresh.DesktopGL.genruntimeconfig.cache
 C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\obj\Debug\net8.0\ref\PoliticoRefresh.dll
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\obj\Debug\net8.0\PoliticoRefresh.DesktopGL.sourcelink.json
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\bin\Debug\net8.0\Content\Game\Graphics\base.xnb
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\bin\Debug\net8.0\Content\Game\Graphics\base_night.xnb

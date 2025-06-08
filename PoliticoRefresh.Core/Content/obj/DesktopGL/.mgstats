@@ -1,0 +1,4 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"c:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Fonts/Hud.spritefont","c:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/bin/DesktopGL/Fonts/Hud.xnb","FontDescriptionProcessor","SpriteFontContent",2744,1071400,0.2019942
+"c:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/base_night.png","c:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/bin/DesktopGL/Game/Graphics/base_night.xnb","TextureProcessor","Texture2DContent",60931,8294485,0.1834014
+"c:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/base.png","c:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/bin/DesktopGL/Game/Graphics/base.xnb","TextureProcessor","Texture2DContent",62305,8294485,0.1854614

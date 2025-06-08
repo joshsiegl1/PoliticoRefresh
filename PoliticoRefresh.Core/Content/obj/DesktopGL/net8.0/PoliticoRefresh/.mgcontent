@@ -5,8 +5,12 @@
   <Config />
   <SourceFiles>
     <File>C:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Fonts/Hud.spritefont</File>
+    <File>C:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/base_night.png</File>
+    <File>C:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/base.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

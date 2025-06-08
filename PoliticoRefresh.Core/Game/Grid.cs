@@ -41,9 +41,13 @@ namespace PoliticoRefresh
             }
         }
 
+        public void Update(GameTime gametime)
+        { 
+
+        }
         public void KillTile(int x, int y)
         {
-            Tiles[x, y] = TileFactory.Get(1, Tiles[x, y].Position); 
+            Tiles[x, y] = TileFactory.Get(1, Tiles[x, y].Position);
         }
 
         public void SetTiles(Tile[,] tiles)
@@ -53,7 +57,8 @@ namespace PoliticoRefresh
 
         public void Draw(SpriteBatch sbatch)
         {
-
+            sbatch.Draw(Assets.BaseNight, Vector2.Zero, null, Color.White * ChronoCycle.NightColor, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0.00003f + ChronoCycle.NightAdditive);
+            sbatch.Draw(Assets.Base, Vector2.Zero, null, Color.White * ChronoCycle.DayColor, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0.00003f + ChronoCycle.DayAdditive);
         }
     }
 }

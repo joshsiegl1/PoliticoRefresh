@@ -41,7 +41,7 @@ namespace PoliticoRefresh
 
         private static Sun sun;
 
-        public Night()
+        public ChronoCycle()
         {
             random = new Random(); 
 
@@ -80,7 +80,7 @@ namespace PoliticoRefresh
                 NightAngle = 260f; 
             }
 
-            if (NightAngle >= 260)
+            if (NightAngle >= 260f)
             {
                 if (isNight)
                 {

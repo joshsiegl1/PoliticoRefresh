@@ -20,3 +20,4 @@ C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Core\obj\Debug
 C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Core\obj\Debug\net8.0\refint\PoliticoRefresh.Core.dll
 C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Core\obj\Debug\net8.0\PoliticoRefresh.Core.pdb
 C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Core\obj\Debug\net8.0\ref\PoliticoRefresh.Core.dll
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Core\obj\Debug\net8.0\PoliticoRefresh.Core.sourcelink.json

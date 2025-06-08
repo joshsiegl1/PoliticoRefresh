@@ -14,7 +14,10 @@ namespace PoliticoRefresh
             set { texture = value; }
         }
 
-        public Grass(Vector2 position) : base()
+        static Texture2D texture_night; 
+        public static Texture2D TextureNight { get { return texture_night; } set { texture_night = value; }}
+
+        public Grass(Vector2 position) : base(texture, position, texture_night)
         {
 
         }
@@ -25,6 +28,11 @@ namespace PoliticoRefresh
         public override int TileNumber()
         {
             return 1;
+        }
+
+        public override void DrawLights(SpriteBatch sbatch, int offsetx, int offsety)
+        {
+            
         }
     }
 }

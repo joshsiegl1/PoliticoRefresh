@@ -15,6 +15,8 @@ namespace PoliticoRefresh.Core
     /// </summary>
     public class PoliticoRefreshGame : Game
     {
+        SpriteBatch spriteBatch; 
+        private PoliticoGame game;
         // Resources for drawing.
         private GraphicsDeviceManager graphicsDeviceManager;
 
@@ -34,7 +36,6 @@ namespace PoliticoRefresh.Core
             OperatingSystem.IsWindows();
 
 
-        private Grid grid = new Grid(); 
         /// <summary>
         /// Initializes a new instance of the game. Configures platform-specific settings, 
         /// initializes services like settings and leaderboard managers, and sets up the 
@@ -63,11 +64,12 @@ namespace PoliticoRefresh.Core
         protected override void Initialize()
         {
             base.Initialize();
+            game = new PoliticoGame();
 
             // Load supported languages and set the default language.
             List<CultureInfo> cultures =
                 LocalizationManager.GetSupportedCultures();
-            
+
             var languages = new List<CultureInfo>();
             for (int i = 0; i < cultures.Count; i++)
             {
@@ -85,7 +87,8 @@ namespace PoliticoRefresh.Core
         /// </summary>
         protected override void LoadContent()
         {
-            grid.LoadContent(Content); 
+            spriteBatch = new SpriteBatch(GraphicsDevice); 
+            Assets.LoadContent(Content);
             base.LoadContent();
         }
 
@@ -119,7 +122,7 @@ namespace PoliticoRefresh.Core
             // Clears the screen with the MonoGame orange color before drawing.
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            game.Draw(spriteBatch); 
 
             base.Draw(gameTime);
         }
