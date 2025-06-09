@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PoliticoRefresh.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b251a7d3cdd417e57af8b2122c37cf1ed8e00342")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e74a88e2278f20c285d58c1cd86b1359d450c2f8")]
 [assembly: System.Reflection.AssemblyProductAttribute("PoliticoRefresh.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PoliticoRefresh.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

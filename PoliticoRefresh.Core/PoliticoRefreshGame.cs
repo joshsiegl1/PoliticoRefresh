@@ -64,7 +64,14 @@ namespace PoliticoRefresh.Core
         protected override void Initialize()
         {
             base.Initialize();
-            game = new PoliticoGame();
+            this.IsMouseVisible = true; 
+            graphicsDeviceManager.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width; //800;//1920;
+            graphicsDeviceManager.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;// 
+            graphicsDeviceManager.PreferMultiSampling = true;
+            graphicsDeviceManager.ApplyChanges(); 
+
+
+            game = new PoliticoGame(graphicsDeviceManager.GraphicsDevice);
 
             // Load supported languages and set the default language.
             List<CultureInfo> cultures =
