@@ -1,6 +1,5 @@
 #region Using Statements
 using System;
-using Microsoft.Win32.SafeHandles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 #endregion
@@ -15,7 +14,7 @@ namespace PoliticoRefresh
         private static int virtualHeight = 1080; 
         static Camera()
         {
-            zoom = 0.75f;
+            zoom = 0.5f;
         }
 
         public static void LoadTransform(GraphicsDevice device)
