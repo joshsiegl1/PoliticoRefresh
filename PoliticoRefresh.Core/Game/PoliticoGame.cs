@@ -28,7 +28,10 @@ namespace PoliticoRefresh
 
         public void Draw(SpriteBatch sbatch)
         {
-            sbatch.Begin(SpriteSortMode.FrontToBack, null, null, null, null, null, Camera.Transform);
+            sbatch.Begin(SpriteSortMode.FrontToBack, transformMatrix: Camera.LoadTransform(graphicsDevice, 1f));
+            cycle.Draw(sbatch); 
+            sbatch.End();  
+            sbatch.Begin(SpriteSortMode.FrontToBack, transformMatrix: Camera.Transform);
             grid.Draw(sbatch); 
             sbatch.End(); 
         }

@@ -7,8 +7,16 @@
     <File>C:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Fonts/Hud.spritefont</File>
     <File>C:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/base_night.png</File>
     <File>C:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/base.png</File>
+    <File>C:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/moon.png</File>
+    <File>C:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/night-background.png</File>
+    <File>C:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/Particles/star.png</File>
+    <File>C:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/Particles/sunparticle.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

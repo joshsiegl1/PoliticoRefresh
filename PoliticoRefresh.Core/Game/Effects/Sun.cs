@@ -13,11 +13,14 @@ namespace PoliticoRefresh
 
         List<SunParticle> Particles;
 
-        public static Texture2D Texture; 
+        public static Texture2D Texture;
 
-        public Sun(Vector2 position)
+        private float RotationMultiple; 
+
+        public Sun(Vector2 position, float RotationMultiple)
         {
-            Particles = new List<SunParticle>(); 
+            this.RotationMultiple = RotationMultiple; 
+            Particles = new List<SunParticle>();
 
             for (int i = 0; i < 10; i++)
             {
@@ -25,9 +28,9 @@ namespace PoliticoRefresh
                 p.color = Colors[rand.Next(Colors.Length)];
                 p.position = position;
                 p.scale = (float)rand.NextDouble();
-                p.randAdditive = (float)rand.Next(10, 1000); 
+                p.randAdditive = (float)rand.Next(10, 1000);
                 p.texture = Texture;
-                Particles.Add(p); 
+                Particles.Add(p);
             }
         }
 
@@ -43,12 +46,12 @@ namespace PoliticoRefresh
         {
             for (int i = 0; i < Particles.Count; i++)
             {
-                Particles[i].position.X = centerOrigin.X + (float)Math.Sin(MathHelper.ToRadians(angle)) * 750f;
-                Particles[i].position.Y = centerOrigin.Y + (float)Math.Cos(MathHelper.ToRadians(angle)) * 750f;
+                Particles[i].position.X = centerOrigin.X + (float)Math.Sin(MathHelper.ToRadians(angle)) * RotationMultiple;
+                Particles[i].position.Y = centerOrigin.Y + (float)Math.Cos(MathHelper.ToRadians(angle)) * RotationMultiple;
             }
         }
 
-        Vector2 centerOrigin = new Vector2(1920 / 2, 1080 / 2);
+        Vector2 centerOrigin = new Vector2(Global.ScreenWidth / 2, Global.ScreenHeight / 2);
         public void Draw(SpriteBatch sbatch)
         {
             foreach (SunParticle p in Particles)

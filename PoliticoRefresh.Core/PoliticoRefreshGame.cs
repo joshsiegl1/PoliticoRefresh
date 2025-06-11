@@ -68,8 +68,9 @@ namespace PoliticoRefresh.Core
             graphicsDeviceManager.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width; //800;//1920;
             graphicsDeviceManager.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;// 
             graphicsDeviceManager.PreferMultiSampling = true;
-            graphicsDeviceManager.ApplyChanges(); 
-
+            graphicsDeviceManager.ApplyChanges();
+            Global.ScreenWidth = graphicsDeviceManager.GraphicsDevice.Viewport.Width;
+            Global.ScreenHeight = graphicsDeviceManager.GraphicsDevice.Viewport.Height; 
 
             game = new PoliticoGame(graphicsDeviceManager.GraphicsDevice);
 
@@ -113,7 +114,7 @@ namespace PoliticoRefresh.Core
                 Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            game.Update(gameTime); 
 
             base.Update(gameTime);
         }

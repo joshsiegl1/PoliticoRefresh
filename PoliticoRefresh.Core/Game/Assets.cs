@@ -18,8 +18,15 @@ namespace PoliticoRefresh
 
         public static void LoadContent(ContentManager Content)
         {
-            LoadNightContent(Content); 
+            LoadNightContent(Content);
             Base = Content.Load<Texture2D>("Game\\Graphics\\base");
+
+            #region Statics
+            Sun.Texture = Content.Load<Texture2D>("Game\\Graphics\\Particles\\sunparticle");
+            ChronoCycle.Moon = Content.Load<Texture2D>("Game\\Graphics\\Moon");
+            ChronoCycle.BackgroundTexture = Content.Load<Texture2D>("Game\\Graphics\\night-background");
+            ChronoCycle.Star.Texture = Content.Load<Texture2D>("Game\\Graphics\\Particles\\star"); 
+            #endregion
         }
     }
 }

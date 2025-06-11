@@ -20,6 +20,8 @@ namespace PoliticoRefresh
         public static float DayColor { get { return dayColor; } }
         public static float NightColor { get { return nightColor; } }
 
+        private static float RotationMultiple = 250f;//750f; 
+
         static Random random;
 
         public static Texture2D Moon; 
@@ -62,7 +64,7 @@ namespace PoliticoRefresh
             nightColor = 0f;
 
             //This might need to be changed, this is a hard-coded aspect ratio
-            sun = new Sun(new Vector2(1920 / 2, 1080 / 2));
+            sun = new Sun(new Vector2(Global.ScreenWidth / 2, Global.ScreenHeight / 2), RotationMultiple);
 
             NightAngle = angle; 
         }
@@ -122,14 +124,11 @@ namespace PoliticoRefresh
             for (int i = 0; i < stars.Count; i++)
             {
                 float pulsate = (float)Math.Sin(time * (stars[i].randadditive * 0.01f)) + 1;
-                stars[i].scale = ( pulsate) * 0.05f; 
+                stars[i].scale = (pulsate) * 0.05f; 
             }
  
-            moonPosition.X = centerOrigin.X + (float)Math.Sin(MathHelper.ToRadians(angle + 180f)) * 750f;
-            moonPosition.Y = centerOrigin.Y + (float)Math.Cos(MathHelper.ToRadians(angle + 180f)) * 750f;
-
-            moonPosition.X -= 100;
-            moonPosition.Y -= 100;
+            moonPosition.X = centerOrigin.X + (float)Math.Sin(MathHelper.ToRadians(angle + 180f)) * RotationMultiple;
+            moonPosition.Y = centerOrigin.Y + (float)Math.Cos(MathHelper.ToRadians(angle + 180f)) * RotationMultiple;
 
             sun.UpdateOrbit(angle);
             sun.Update(gametime);
@@ -154,31 +153,31 @@ namespace PoliticoRefresh
                 dayColor = 1f;
                 angle = 80f;
                 NightAngle = 80f;
-                sun = new Sun(new Vector2(1920 / 2, 1080 / 2));
+                sun = new Sun(new Vector2(Global.ScreenWidth / 2, Global.ScreenHeight / 2), RotationMultiple);
                 moonPosition = Vector2.Zero;
                 backgroundColor = 0f;
                 isNight = false; 
             }
         }
 
-        Vector2 centerOrigin = new Vector2(1920 / 2, 1080 / 2); 
+        Vector2 centerOrigin = new Vector2(Global.ScreenWidth / 2, Global.ScreenHeight / 2); 
         static Vector2 moonPosition;
         static float angle = 80f; 
-        public void Draw(SpriteBatch sbatch, Matrix ScreenMatrix)
+        public void Draw(SpriteBatch sbatch)
         {
             if (isStorm)
             {
-                sbatch.Draw(StormBackgroundTexture, new Rectangle(0, 0, 1920, 1200), null, Color.White, 0f, Vector2.Zero, SpriteEffects.None, 0.00001f);
+                //sbatch.Draw(StormBackgroundTexture, new Rectangle(0, 0, 1920, 1200), null, Color.White, 0f, Vector2.Zero, SpriteEffects.None, 0.00001f);
             }
             else
             {
-                sbatch.Draw(BackgroundTexture, new Rectangle(0, 0, 1920, 1200), null, Color.White * backgroundColor, 0f, Vector2.Zero, SpriteEffects.None, 0.00001f);
+                sbatch.Draw(BackgroundTexture, new Rectangle(0, 0, Global.VirtualWidth, Global.VirtualHeight), null, Color.White * backgroundColor, 0f, Vector2.Zero, SpriteEffects.None, 0.00001f);
             }
 
             if (!IsStorm)
             {
                 sbatch.End();
-                sbatch.Begin(SpriteSortMode.FrontToBack, BlendState.Additive, null, null, null, null, ScreenMatrix);
+                sbatch.Begin(SpriteSortMode.FrontToBack, BlendState.Additive, null, null, null, null, null);
 
                 foreach (Star s in stars)
                     sbatch.Draw(Star.Texture, s.position, null, s.color * backgroundColor, 0f, new Vector2(32, 32), s.scale, SpriteEffects.None, 0.00002f);
@@ -187,12 +186,13 @@ namespace PoliticoRefresh
                     sbatch.Draw(Star.Texture, s.position, null, s.color * backgroundColor, 0f, new Vector2(32, 32), -s.scale, SpriteEffects.None, 0.00003f);
 
                 sun.Draw(sbatch);
-
-                sbatch.Draw(Moon, moonPosition, null, Color.White * backgroundColor, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0.00004f);
-
-
-
                 sbatch.End();
+                sbatch.Begin(); 
+                sbatch.Draw(Moon, moonPosition, null, Color.White * backgroundColor, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0.00004f);
+                sbatch.End(); 
+                sbatch.Begin(SpriteSortMode.FrontToBack, BlendState.Additive, null, null, null, null, null);
+                sbatch.Draw(Moon, moonPosition, null, Color.White * backgroundColor * 0.2f, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0.00004f);
+                sbatch.End(); 
                 sbatch.Begin();
             }
         }

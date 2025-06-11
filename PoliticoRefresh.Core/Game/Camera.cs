@@ -10,8 +10,6 @@ namespace PoliticoRefresh
     {
         public static Matrix Transform { get; private set; }
         private static float zoom;
-        private static int virtualWidth = 1920;
-        private static int virtualHeight = 1080; 
         static Camera()
         {
             zoom = 0.5f;
@@ -19,20 +17,20 @@ namespace PoliticoRefresh
 
         public static void LoadTransform(GraphicsDevice device)
         {
-            int screenWidth = device.Viewport.Width;
-            int screenHeight = device.Viewport.Height;
+            int screenWidth = Global.ScreenWidth;
+            int screenHeight = Global.ScreenHeight;
 
-            float scaleX = (float)screenWidth / virtualWidth;
-            float scaleY = (float)screenHeight / virtualHeight;
+            float scaleX = (float)screenWidth / Global.VirtualWidth;
+            float scaleY = (float)screenHeight / Global.VirtualHeight;
 
             float aspectRatio = Math.Min(scaleX, scaleY);
 
-            Vector2 virtualCenter = new Vector2(virtualWidth / 2f, virtualHeight / 2f);
+            Vector2 virtualCenter = new Vector2(Global.VirtualWidth / 2f, Global.VirtualHeight / 2f);
             float finalScale = aspectRatio * zoom;
 
             // Compute translation to center the scaled virtual screen in the real screen
-            float viewportWidth = virtualWidth * finalScale;
-            float viewportHeight = virtualHeight * finalScale;
+            float viewportWidth = Global.VirtualWidth * finalScale;
+            float viewportHeight = Global.VirtualHeight * finalScale;
             float offsetX = (screenWidth - viewportWidth) / 2f;
             float offsetY = (screenHeight - viewportHeight) / 2f;
 
@@ -42,7 +40,38 @@ namespace PoliticoRefresh
                 Matrix.CreateTranslation(offsetX + virtualCenter.X * finalScale,
                 offsetY + virtualCenter.Y * finalScale, 0f); // Move back to screen center
         }
+        #region Overloaded LoadTransform Method
+        /// <summary>
+        /// Overload allows you to pass a zoom variable into the method to override the fixed zoom value
+        /// </summary>
+        /// <param name="device"></param>
+        /// <param name="zoom"></param>
+        public static Matrix LoadTransform(GraphicsDevice device, float zoom)
+        {
+            int screenWidth = Global.ScreenWidth;
+            int screenHeight = Global.ScreenHeight;
 
+            float scaleX = (float)screenWidth / Global.VirtualWidth;
+            float scaleY = (float)screenHeight / Global.VirtualHeight;
+
+            float aspectRatio = Math.Min(scaleX, scaleY);
+
+            Vector2 virtualCenter = new Vector2(Global.VirtualWidth / 2f, Global.VirtualHeight / 2f);
+            float finalScale = aspectRatio * zoom;
+
+            // Compute translation to center the scaled virtual screen in the real screen
+            float viewportWidth = Global.VirtualWidth * finalScale;
+            float viewportHeight = Global.VirtualHeight * finalScale;
+            float offsetX = (screenWidth - viewportWidth) / 2f;
+            float offsetY = (screenHeight - viewportHeight) / 2f;
+
+            return
+                Matrix.CreateTranslation(-virtualCenter.X, -virtualCenter.Y, 0f) * // Move world origin to center
+                Matrix.CreateScale(finalScale, finalScale, 1f) *                   // Zoom and base scaling
+                Matrix.CreateTranslation(offsetX + virtualCenter.X * finalScale,
+                offsetY + virtualCenter.Y * finalScale, 0f); // Move back to screen center
+        }
+        #endregion
 
     }
 }
