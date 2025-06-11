@@ -2,6 +2,7 @@
 using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 #endregion
 
 namespace PoliticoRefresh
@@ -10,12 +11,30 @@ namespace PoliticoRefresh
     {
         public static Matrix Transform { get; private set; }
         private static float zoom;
+        private static MouseState previousMouseState; 
         static Camera()
         {
             zoom = 0.75f;
         }
 
-        public static void LoadTransform(GraphicsDevice device)
+        public static void Update(GameTime gametime)
+        {
+            MouseState currentMouseState = Mouse.GetState();
+            int scrollDelta = currentMouseState.ScrollWheelValue - previousMouseState.ScrollWheelValue;
+            if (scrollDelta > 0 && zoom > 0)
+            {
+                zoom -= 0.01f;
+                LoadTransform();
+            }
+            else if (scrollDelta < 0 && zoom < 1f)
+            {
+                zoom += 0.01f;
+                LoadTransform(); 
+            }
+            previousMouseState = currentMouseState; 
+        }
+
+        public static void LoadTransform()
         {
             int screenWidth = Global.ScreenWidth;
             int screenHeight = Global.ScreenHeight;

@@ -16,7 +16,7 @@ namespace PoliticoRefresh
         public PoliticoGame(GraphicsDevice graphicsDevice)
         {
             this.graphicsDevice = graphicsDevice;
-            Camera.LoadTransform(graphicsDevice); 
+            Camera.LoadTransform(); 
             grid = new Grid();
             cycle = new ChronoCycle(); 
         }
@@ -29,6 +29,7 @@ namespace PoliticoRefresh
 
         public void Update(GameTime gametime)
         {
+            Camera.Update(gametime); 
             grid.Update(gametime);
             cycle.Update(gametime);
         }
