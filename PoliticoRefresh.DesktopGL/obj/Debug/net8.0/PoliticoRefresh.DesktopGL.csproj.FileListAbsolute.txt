@@ -41,3 +41,8 @@ C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\bin\
 C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\bin\Debug\net8.0\Content\Game\Graphics\night-background.xnb
 C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\bin\Debug\net8.0\Content\Game\Graphics\Particles\sunparticle.xnb
 C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\bin\Debug\net8.0\Content\Game\Graphics\Particles\star.xnb
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\bin\Debug\net8.0\Content\Game\Graphics\Tiles\capitol.xnb
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\bin\Debug\net8.0\Content\Game\Graphics\Tiles\grass.xnb
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\bin\Debug\net8.0\Content\Game\Graphics\Tiles\Night\capitol_night.xnb
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\bin\Debug\net8.0\Content\Game\Graphics\Tiles\Night\grass_night.xnb
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\bin\Debug\net8.0\Content\Game\Graphics\Tiles\flag_sheet.xnb

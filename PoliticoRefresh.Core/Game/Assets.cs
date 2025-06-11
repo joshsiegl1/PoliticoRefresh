@@ -13,7 +13,9 @@ namespace PoliticoRefresh
 
         private static void LoadNightContent(ContentManager Content)
         {
-            BaseNight = Content.Load<Texture2D>("Game\\Graphics\\base_night"); 
+            BaseNight = Content.Load<Texture2D>("Game\\Graphics\\base_night");
+            Capitol.Texture_Night = Content.Load<Texture2D>("Game\\Graphics\\Tiles\\Night\\capitol_night");
+            Grass.TextureNight = Content.Load<Texture2D>("Game\\Graphics\\Tiles\\Night\\grass_night"); 
         }
 
         public static void LoadContent(ContentManager Content)
@@ -25,7 +27,19 @@ namespace PoliticoRefresh
             Sun.Texture = Content.Load<Texture2D>("Game\\Graphics\\Particles\\sunparticle");
             ChronoCycle.Moon = Content.Load<Texture2D>("Game\\Graphics\\Moon");
             ChronoCycle.BackgroundTexture = Content.Load<Texture2D>("Game\\Graphics\\night-background");
-            ChronoCycle.Star.Texture = Content.Load<Texture2D>("Game\\Graphics\\Particles\\star"); 
+            ChronoCycle.Star.Texture = Content.Load<Texture2D>("Game\\Graphics\\Particles\\star");
+            #endregion
+
+            #region Tiles
+            Grass.Texture = Content.Load<Texture2D>("Game\\Graphics\\Tiles\\grass");
+            Capitol.Texture = Content.Load<Texture2D>("Game\\Graphics\\Tiles\\capitol");
+
+            Empty.Texture = Grass.Texture;
+            #endregion
+            #region Vehicles
+            #endregion
+            #region Misc.
+            Capitol.Flag_Texture = Content.Load<Texture2D>("Game\\Graphics\\Tiles\\flag_sheet"); 
             #endregion
         }
     }

@@ -1,6 +1,7 @@
 #region Using Statements
 using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 #endregion
 
@@ -18,6 +19,12 @@ namespace PoliticoRefresh
             Camera.LoadTransform(graphicsDevice); 
             grid = new Grid();
             cycle = new ChronoCycle(); 
+        }
+
+        public void LoadContent(ContentManager Content)
+        {
+            cycle.LoadContent(); 
+            grid.LoadContent(Content); 
         }
 
         public void Update(GameTime gametime)

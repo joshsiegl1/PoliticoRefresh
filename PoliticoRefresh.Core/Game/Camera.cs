@@ -12,7 +12,7 @@ namespace PoliticoRefresh
         private static float zoom;
         static Camera()
         {
-            zoom = 0.5f;
+            zoom = 0.75f;
         }
 
         public static void LoadTransform(GraphicsDevice device)

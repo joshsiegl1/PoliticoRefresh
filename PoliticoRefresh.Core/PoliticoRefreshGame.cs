@@ -73,6 +73,7 @@ namespace PoliticoRefresh.Core
             Global.ScreenHeight = graphicsDeviceManager.GraphicsDevice.Viewport.Height; 
 
             game = new PoliticoGame(graphicsDeviceManager.GraphicsDevice);
+            game.LoadContent(Content); 
 
             // Load supported languages and set the default language.
             List<CultureInfo> cultures =

@@ -33,6 +33,7 @@ namespace PoliticoRefresh
                         rowOffset = Tile.OddRowXOffset;
 
                     int tileNumber = int.Parse(MapData[index - 1].ToString());
+
                     Vector2 position = new Vector2(
                         (x * Tile.TileStepX) + rowOffset,
                         y * Tile.TileStepY);
@@ -42,8 +43,14 @@ namespace PoliticoRefresh
         }
 
         public void Update(GameTime gametime)
-        { 
-
+        {
+            for (int x = 0; x < Grid.GridWidth; x++)
+            {
+                for (int y = 0; y < Grid.GridHeight; y++)
+                {
+                    Tiles[x, y].Update(gametime); 
+                }
+            }
         }
         public void KillTile(int x, int y)
         {
@@ -57,8 +64,17 @@ namespace PoliticoRefresh
 
         public void Draw(SpriteBatch sbatch)
         {
+            Console.WriteLine("Grid draw method called"); 
             sbatch.Draw(Assets.BaseNight, Vector2.Zero, null, Color.White * ChronoCycle.NightColor, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0.00003f + ChronoCycle.NightAdditive);
             sbatch.Draw(Assets.Base, Vector2.Zero, null, Color.White * ChronoCycle.DayColor, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0.00003f + ChronoCycle.DayAdditive);
+
+            for (int y = 0; y < GridHeight; y++)
+            {
+                for (int x = 0; x < GridWidth; x++)
+                {
+                    Tiles[x, y].Draw(sbatch, 0, 0); 
+                }
+            }
         }
     }
 }

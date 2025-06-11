@@ -15,13 +15,18 @@ namespace PoliticoRefresh
 
         public static Texture2D Texture;
 
+        private Vector2 position; 
         private float RotationMultiple; 
 
         public Sun(Vector2 position, float RotationMultiple)
         {
+            this.position = position; 
             this.RotationMultiple = RotationMultiple; 
             Particles = new List<SunParticle>();
+        }
 
+        public void LoadContent()
+        { 
             for (int i = 0; i < 10; i++)
             {
                 SunParticle p = new SunParticle();

@@ -56,12 +56,12 @@ namespace PoliticoRefresh
         public Tile(Texture2D texture, Vector2 position)
         {
             KeyTracker++;
-            this.UniqueKey = KeyTracker; 
+            this.UniqueKey = KeyTracker;
 
             this.texture = texture;
             this.position = position;
 
-            startingPosition = position; 
+            startingPosition = position;
 
             this.bounds = Rectangle.Empty;
 
@@ -83,6 +83,8 @@ namespace PoliticoRefresh
             X = xPos / Tile.TileStepX;
 
             layerDepth = Y * 0.01f;
+
+            Console.WriteLine(this.UniqueKey.ToString() + " Layer Depth:" + layerDepth.ToString()); 
         }
 
         public Tile(Texture2D texture, Vector2 position, Texture2D texture_night)
@@ -217,7 +219,6 @@ namespace PoliticoRefresh
             bounds = imageRect;
             sbatch.Draw(texture, imageRect, null, selectedTint * ChronoCycle.DayColor, 0.0f, Vector2.Zero, SpriteEffects.None, layerDepth + ChronoCycle.DayAdditive);
             sbatch.Draw(texture_night, imageRect, null, selectedTint * ChronoCycle.NightColor, 0.0f, Vector2.Zero, SpriteEffects.None, layerDepth + ChronoCycle.NightAdditive);
-
         }
 
         public virtual void Draw(SpriteBatch sbatch, int offsetX, int offsetY, float LayerDepth)

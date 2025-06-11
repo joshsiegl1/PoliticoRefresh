@@ -11,8 +11,18 @@
     <File>c:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/night-background.png</File>
     <File>c:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/Particles/star.png</File>
     <File>c:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/Particles/sunparticle.png</File>
+    <File>c:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/Tiles/capitol.png</File>
+    <File>c:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/Tiles/flag_sheet.png</File>
+    <File>c:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/Tiles/grass.png</File>
+    <File>c:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/Tiles/Night/capitol_night.png</File>
+    <File>c:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/Tiles/Night/grass_night.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
