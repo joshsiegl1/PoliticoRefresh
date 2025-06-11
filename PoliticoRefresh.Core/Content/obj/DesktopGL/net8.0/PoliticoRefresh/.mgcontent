@@ -14,10 +14,14 @@
     <File>C:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/Tiles/capitol.png</File>
     <File>C:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/Tiles/flag_sheet.png</File>
     <File>C:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/Tiles/grass.png</File>
+    <File>C:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/Tiles/house.png</File>
     <File>C:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/Tiles/Night/capitol_night.png</File>
     <File>C:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/Tiles/Night/grass_night.png</File>
+    <File>C:/Users/joshs/Documents/projects/PoliticoRefresh/PoliticoRefresh.Core/Content/Game/Graphics/Tiles/Night/house_night.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

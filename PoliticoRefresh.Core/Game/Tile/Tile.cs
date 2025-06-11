@@ -83,8 +83,6 @@ namespace PoliticoRefresh
             X = xPos / Tile.TileStepX;
 
             layerDepth = Y * 0.01f;
-
-            Console.WriteLine(this.UniqueKey.ToString() + " Layer Depth:" + layerDepth.ToString()); 
         }
 
         public Tile(Texture2D texture, Vector2 position, Texture2D texture_night)

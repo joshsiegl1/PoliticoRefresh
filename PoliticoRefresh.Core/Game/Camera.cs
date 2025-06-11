@@ -23,12 +23,12 @@ namespace PoliticoRefresh
             int scrollDelta = currentMouseState.ScrollWheelValue - previousMouseState.ScrollWheelValue;
             if (scrollDelta > 0 && zoom > 0)
             {
-                zoom -= 0.01f;
+                zoom -= 0.02f;
                 LoadTransform();
             }
             else if (scrollDelta < 0 && zoom < 1f)
             {
-                zoom += 0.01f;
+                zoom += 0.02f;
                 LoadTransform(); 
             }
             previousMouseState = currentMouseState; 

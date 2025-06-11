@@ -15,7 +15,8 @@ namespace PoliticoRefresh
         {
             BaseNight = Content.Load<Texture2D>("Game\\Graphics\\base_night");
             Capitol.Texture_Night = Content.Load<Texture2D>("Game\\Graphics\\Tiles\\Night\\capitol_night");
-            Grass.TextureNight = Content.Load<Texture2D>("Game\\Graphics\\Tiles\\Night\\grass_night"); 
+            Grass.TextureNight = Content.Load<Texture2D>("Game\\Graphics\\Tiles\\Night\\grass_night");
+            House.TextureNight = Content.Load<Texture2D>("Game\\Graphics\\Tiles\\Night\\house_night"); 
         }
 
         public static void LoadContent(ContentManager Content)
@@ -33,6 +34,7 @@ namespace PoliticoRefresh
             #region Tiles
             Grass.Texture = Content.Load<Texture2D>("Game\\Graphics\\Tiles\\grass");
             Capitol.Texture = Content.Load<Texture2D>("Game\\Graphics\\Tiles\\capitol");
+            House.Texture = Content.Load<Texture2D>("Game\\Graphics\\Tiles\\house");
 
             Empty.Texture = Grass.Texture;
             #endregion

@@ -18,8 +18,8 @@ namespace PoliticoRefresh
                     return new Capitol(position);
                 // case 3:
                 //     return new Road(position);
-                // case 4:
-                //     return new House(position);
+                case 4:
+                    return new House(position);
                 // case 5:
                 //     return new WindTurbine(position);
                 // case 6:

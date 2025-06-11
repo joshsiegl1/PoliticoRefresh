@@ -46,3 +46,5 @@ C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\bin\
 C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\bin\Debug\net8.0\Content\Game\Graphics\Tiles\Night\capitol_night.xnb
 C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\bin\Debug\net8.0\Content\Game\Graphics\Tiles\Night\grass_night.xnb
 C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\bin\Debug\net8.0\Content\Game\Graphics\Tiles\flag_sheet.xnb
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\bin\Debug\net8.0\Content\Game\Graphics\Tiles\house.xnb
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.DesktopGL\bin\Debug\net8.0\Content\Game\Graphics\Tiles\Night\house_night.xnb
