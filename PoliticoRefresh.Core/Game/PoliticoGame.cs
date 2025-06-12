@@ -1,8 +1,11 @@
 #region Using Statements
 using System;
+using System.Text.Json; 
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using System.Text.Json.Serialization;
 #endregion
 
 namespace PoliticoRefresh
@@ -12,13 +15,20 @@ namespace PoliticoRefresh
         private GraphicsDevice graphicsDevice; 
         private Grid grid;
         private ChronoCycle cycle;
+        private List<Person> People;
 
         public PoliticoGame(GraphicsDevice graphicsDevice)
         {
             this.graphicsDevice = graphicsDevice;
-            Camera.LoadTransform(); 
+            Camera.LoadTransform();
             grid = new Grid();
-            cycle = new ChronoCycle(); 
+            cycle = new ChronoCycle();
+            // var options = new JsonSerializerOptions
+            // {
+            //     PropertyNameCaseInsensitive = true,
+            //     Converters = {new JsonStringEnumConverter(JsonNamingPolicy.CamelCase)}
+            // };
+            // People = JsonSerializer.Deserialize<List<Person>>("", options); 
         }
 
         public void LoadContent(ContentManager Content)
