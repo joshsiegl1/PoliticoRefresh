@@ -1,5 +1,6 @@
 #region Using Statements
 using System;
+using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -11,9 +12,13 @@ namespace PoliticoRefresh
     {
         public static Matrix Transform { get; private set; }
         private static float zoom;
-        private static MouseState previousMouseState; 
+        private static MouseState previousMouseState;
+        private static bool isDragging;
+        private static Vector2 dragStart;
+        private static Vector2 cameraPosition; 
         static Camera()
         {
+            isDragging = false;
             zoom = 0.75f;
         }
 
@@ -31,6 +36,30 @@ namespace PoliticoRefresh
                 zoom += 0.02f;
                 LoadTransform(); 
             }
+
+            if (currentMouseState.LeftButton == ButtonState.Pressed)
+            {
+                if (!isDragging)
+                {
+                    isDragging = true;
+                    dragStart = currentMouseState.Position.ToVector2();
+                }
+                else
+                {
+                    Vector2 currentMouse = currentMouseState.Position.ToVector2();
+                    Vector2 delta = currentMouse - dragStart;
+
+                    cameraPosition -= delta;
+                    dragStart = currentMouse;
+                }
+                LoadTransform();
+            }
+            else
+            {
+                isDragging = false;
+                cameraPosition = Vector2.Zero; 
+            }
+
             previousMouseState = currentMouseState; 
         }
 
@@ -54,7 +83,7 @@ namespace PoliticoRefresh
             float offsetY = (screenHeight - viewportHeight) / 2f;
 
             Transform =
-                Matrix.CreateTranslation(-virtualCenter.X, -virtualCenter.Y, 0f) * // Move world origin to center
+                Matrix.CreateTranslation(-virtualCenter.X + cameraPosition.X, -virtualCenter.Y + cameraPosition.Y, 0f) * // Move world origin to center
                 Matrix.CreateScale(finalScale, finalScale, 1f) *                   // Zoom and base scaling
                 Matrix.CreateTranslation(offsetX + virtualCenter.X * finalScale,
                 offsetY + virtualCenter.Y * finalScale, 0f); // Move back to screen center

@@ -17,5 +17,10 @@ namespace PoliticoRefresh
         }
 
         Gender gender { get; set; }
+
+        public string SayHello()
+        {
+            return "Hello, My Name is " + first_name + " " + last_name + " Nice to Meet You"; 
+        }
     }
 }

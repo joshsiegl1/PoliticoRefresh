@@ -1,5 +1,6 @@
 #region Using Statements
 using System;
+using System.IO; 
 using System.Text.Json; 
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
@@ -23,18 +24,22 @@ namespace PoliticoRefresh
             Camera.LoadTransform();
             grid = new Grid();
             cycle = new ChronoCycle();
-            // var options = new JsonSerializerOptions
-            // {
-            //     PropertyNameCaseInsensitive = true,
-            //     Converters = {new JsonStringEnumConverter(JsonNamingPolicy.CamelCase)}
-            // };
-            // People = JsonSerializer.Deserialize<List<Person>>("", options); 
         }
 
         public void LoadContent(ContentManager Content)
         {
-            cycle.LoadContent(); 
-            grid.LoadContent(Content); 
+            cycle.LoadContent();
+            grid.LoadContent(Content);
+            string jsonPath = Path.Combine(Content.RootDirectory, "People.json");
+            string jsonString = File.ReadAllText(jsonPath); 
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true,
+                Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
+            };
+            People = JsonSerializer.Deserialize<List<Person>>(jsonString, options);
+            foreach (Person p in People)
+                Console.WriteLine(p.SayHello()); 
         }
 
         public void Update(GameTime gametime)

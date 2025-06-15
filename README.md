@@ -13,6 +13,7 @@ The rest of this documentation will be dedicated to technical information regard
 TODO: 
     Use a Project Management Tool rather than TODO's in the README. 
     Add variables for magic numbers
+    Needs a TileMap editor
 
 # Map Data
 The Map Data is just a string of numbers that correspond to the [Tile Numbers](#tile-numbers) listed below. 0's can be swapped out with any other number within the [Tile Numbers](#tile-numbers) list to display that type of tile. The tiles are generated using a [Factory Pattern](https://www.codeproject.com/Articles/1131770/Factory-Patterns-Simple-Factory-Pattern)
