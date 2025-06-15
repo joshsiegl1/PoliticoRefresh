@@ -1,0 +1,13 @@
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Editor.Core\bin\Debug\net8.0\PoliticoRefresh.Editor.Core.deps.json
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Editor.Core\bin\Debug\net8.0\PoliticoRefresh.Editor.Core.dll
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Editor.Core\bin\Debug\net8.0\PoliticoRefresh.Editor.Core.pdb
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Editor.Core\obj\Debug\net8.0\PoliticoRefresh.Editor.Core.csproj.AssemblyReference.cache
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Editor.Core\obj\Debug\net8.0\PoliticoRefresh.Editor.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Editor.Core\obj\Debug\net8.0\PoliticoRefresh.Editor.Core.AssemblyInfoInputs.cache
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Editor.Core\obj\Debug\net8.0\PoliticoRefresh.Editor.Core.AssemblyInfo.cs
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Editor.Core\obj\Debug\net8.0\PoliticoRefresh.Editor.Core.csproj.CoreCompileInputs.cache
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Editor.Core\obj\Debug\net8.0\PoliticoRefresh.Editor.Core.sourcelink.json
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Editor.Core\obj\Debug\net8.0\PoliticoRefresh.Editor.Core.dll
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Editor.Core\obj\Debug\net8.0\refint\PoliticoRefresh.Editor.Core.dll
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Editor.Core\obj\Debug\net8.0\PoliticoRefresh.Editor.Core.pdb
+C:\Users\joshs\Documents\projects\PoliticoRefresh\PoliticoRefresh.Editor.Core\obj\Debug\net8.0\ref\PoliticoRefresh.Editor.Core.dll
