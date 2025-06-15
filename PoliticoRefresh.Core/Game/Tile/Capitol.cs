@@ -13,9 +13,10 @@ namespace PoliticoRefresh
         public static Texture2D Texture { get { return texture; } set { texture = value; } }
         static Texture2D texture_night;
         public static Texture2D Texture_Night { get { return texture_night; } set { texture_night = value; } }
-
         static Texture2D flag_texture; 
         public static Texture2D Flag_Texture { get { return flag_texture;  } set { flag_texture = value; } }
+        static Texture2D flag_texture_night; 
+        public static Texture2D Flag_Texture_Night { get { return flag_texture_night; } set { flag_texture_night = value; } }
         private Animation flagAnimation; 
         public Capitol(Vector2 position) : base(texture, position, texture_night)
         {
@@ -45,6 +46,7 @@ namespace PoliticoRefresh
             base.Draw(sbatch, offsetX, offsetY);
 
             sbatch.Draw(flag_texture, new Vector2(Position.X + 30 - offsetX, Position.Y - 28 - offsetY), flagAnimation.SourceRect, selectedTint * ChronoCycle.DayColor, 0f, Vector2.Zero, 1f, SpriteEffects.None, (Y * 0.01f) + 0.001f + ChronoCycle.DayAdditive);
+            sbatch.Draw(flag_texture_night, new Vector2(Position.X + 30 - offsetX, Position.Y - 28 - offsetY), flagAnimation.SourceRect, selectedTint * ChronoCycle.NightColor, 0f, Vector2.Zero, 1f, SpriteEffects.None, (Y * 0.01f) + 0.001f + ChronoCycle.NightAdditive);
         }
     }
 }
