@@ -1,4 +1,4 @@
-
+using PoliticoRefresh.Editor.Core; 
 internal class Program
 {
     /// <summary>
@@ -8,6 +8,7 @@ internal class Program
     /// <param name="args"></param>
     private static void Main(string[] args)
     {
-
+        using var game = new PoliticoRefreshGame();
+        game.Run(); 
     }
 }
