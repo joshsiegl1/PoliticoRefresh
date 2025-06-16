@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PoliticoRefresh.iOS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f7d8eb1bd76ef7db2793fd7be5507733d21838e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af3ae2a602d233612c938e88a95ddfd5feb49f6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("PoliticoRefresh.iOS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PoliticoRefresh.iOS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
