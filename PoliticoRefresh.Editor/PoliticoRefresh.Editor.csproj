@@ -1,2 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <PublishReadyToRun>false</PublishReadyToRun>
+        <TieredCompilation>false</TieredCompilation>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+    </PropertyGroup> 
 </Project> 
