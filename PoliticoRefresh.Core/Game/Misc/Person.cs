@@ -10,6 +10,7 @@ namespace PoliticoRefresh
         public string first_name { get; set; }
         public string last_name { get; set; }
         public int age { get; set; }
+        public string occupation { get; set; }
         public enum Gender
         {
             Male,
